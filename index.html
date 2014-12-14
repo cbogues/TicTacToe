@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marvel vs Capcom or Something else</title>
+
+		<link rel="stylesheet" href="css/main.css">	
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/GameController.js"></script>
+
+</head>
+<body ng-app="tttApp" ng-controller="GameController as game">
+
+    <div class="left">
+
+    <!-- Player 1 -->
+      <p> <input type="text" id="player1name" ng-model="game.player1name" ng-click="game.setName1(player1Name)" ></p>
+
+      <p id="player1score">{{oneScore}} </p>
+      <p id="player1message">{{oneMessage}} </p>
+    </div>
+
+    <!-- player 2 -->
+    <div class= "right">
+      <p> <input type="text" id="player2name" ng-model="game.player2name" ng-click="game.setName2(player2Name)"></p>
+
+        <p id="player2score">{{twoScore}}</p>
+        <p id="player2message">{{twoMessage}}</p>
+   </div> 
+
+
+
+<!-- Gameboard -->
+    <div class="board">
+      <h1>Tic Tac Toe</h1>
+    <div class="boardrow" ng-repeat="row in game.grid">
+        
+        <div class="innerboard"  ng-repeat="tile in row track by $index" ng-click="game.playTurn($index, $parent.$index)" ng-alert="winner"> {{tile}}
+         <!--  <span style="font-size:20px">Col: {{ $parent.$index }}
+          Row: {{ $index }}</span> -->
+        </div>
+    </div>
+
+        <!-- RESET BUTTON -->
+    <div class="reset" ng-click="game.clearBoard()">New Game</div>
+    </div>
+    
+</body>
+</html>

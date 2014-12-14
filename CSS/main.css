@@ -1,0 +1,120 @@
+
+body {
+	/*possibly changing font*/
+	font-family: Garamond;
+/*	background-color: orange;
+*/}
+
+/*theleft side below the title*/
+.left {
+/*	background-color: blue;
+*/	width: 250px;
+	height: 100%;
+	float: left;
+	text-align: center;
+	color: #aca090;
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+/*right side below the title*/
+.right {
+/*	background-color: blue;
+*/	width: 250px;
+	height: 100%;
+	float: right;
+	text-align: center;
+	color: #aca090;
+	font-size: 24px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+h1 {
+	font-size: 56px;
+	text-align: center;
+	color: black;
+}
+
+.board {
+	width: 600px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.boardrow {
+	
+}
+
+
+.innerboard {
+/*	color: purple;
+*/	text-align: center;
+	line-height: 125px;
+	font-size: 100px;
+	float: left;
+	width: 150px;
+	height: 150px;
+	background-color: white;
+	border: 3px solid black;
+	margin: 3px;
+	cursor: pointer;
+	border-radius: 10px;
+}
+
+/*.innerboard:hover {
+	background-color: grey;
+}*/
+
+
+.clear {
+	clear: both;
+}
+
+#left_message, #right_message {
+	margin-top: 400px;
+	color: blue;
+}
+
+#p1_name:hover, #p2_name:hover {
+	cursor: pointer;
+	color: blue;
+}
+
+#p1_name, #p2_name {
+background-color: black;
+	color: blue;
+	border: none;
+	text-align: center;
+	font-family: Helvetica;
+	font-size: 24px;
+	width: 180px;
+}
+
+input:focus {
+	outline: 0;
+}
+
+.reset {
+	width: 250px;
+	height: 35px;
+	border-radius: 8px;
+	background-color: grey;
+	float: clear;
+	margin: 530px auto 0px;
+	line-height: 35px;
+	text-align: center;
+	color: green;
+}
+
+.reset:hover {
+	background-color: black;
+	cursor: pointer;
+	color: red;
+}
+
+
+
